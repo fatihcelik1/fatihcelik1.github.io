@@ -1,28 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FCgames</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fcgames — Mobile Games</title>
+<meta name="description" content="Independent mobile puzzle and casual games by Fatih Celik.">
 <style>
-  body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#1f6f3a;color:#fff;
-       display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;text-align:center}
-  .c{max-width:520px;padding:40px}
-  h1{font-size:2.4rem;margin:.2em 0}
-  a{color:#ffd23f;font-weight:bold;text-decoration:none}
-  .game{margin-top:24px;font-size:1.2rem}
+  :root{--bg:#14131a;--card:#1e1d26;--ink:#eceaf2;--muted:#9a94a8;--accent:#5b9be6;--line:#2b2a35}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 20px 72px}
+  h1{font-size:2rem;margin:0 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 36px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:18px 20px;margin:0 0 14px}
+  .card h2{font-size:1.05rem;margin:0 0 4px}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+  .links{display:flex;flex-wrap:wrap;gap:8px}
+  .links a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;
+           font-size:.85rem;background:#26252f}
+  .links a.ghost{background:transparent;color:var(--muted)}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  footer{margin-top:40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:20px}
 </style>
 </head>
 <body>
-  <div class="c">
-    <h1>🦁 FCgames</h1>
-    <p>Indie mobile games made with love.</p>
-    <div class="game">
-      <p><strong>Merge Safari: Jungle</strong></p>
-      <a href="https://play.google.com/store/apps/details?id=com.fcgames.mergesafarijungle">Get it on Google Play</a>
+  <div class="wrap">
+    <h1>fcgames</h1>
+    <p class="sub">Independent mobile puzzle and casual games.</p>
+
+    <div class="card">
+      <h2>Hexa Twist: Color Puzzle</h2>
+      <p>A 3D hexagon color-sorting puzzle. Stack matching colors, clear towers, relax.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.fatihcelik.hegasort">Google Play</a>
+        <a href="https://apps.apple.com/app/id6792283478">App Store</a>
+        <a class="ghost" href="https://fatihcelik1.github.io/hexa-sort-privacy/">Privacy Policy</a>
+      </div>
     </div>
-    <p style="margin-top:32px"><a href="https://fatihcelik1.github.io/merge-privacy/">Privacy Policy</a></p>
-    <p style="margin-top:24px;font-size:.85rem;opacity:.7">Contact: 16.5fatihcelik@gmail.com</p>
+
+    <div class="card">
+      <h2>Poopie: Poop Tracker &amp; Game</h2>
+      <p>A light, playful daily tracking app with streaks, stats and collectibles.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.poopie.app.poopie">Google Play</a>
+        <a href="https://apps.apple.com/app/id6783956747">App Store</a>
+        <a class="ghost" href="https://fatihcelik1.github.io/poopie-privacy/">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Block Puzzle Blast Color</h2>
+      <p>Classic block puzzle with colorful blast effects and combo chains.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.fcgames.blockpuzzleblastcolor">Google Play</a>
+        <a class="ghost" href="https://fatihcelik1.github.io/blockpuzzle-blast-color-privacy/">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Merge Safari: Animal Puzzle</h2>
+      <p>Merge animals, grow your jungle and unlock new species.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.fcgames.mergesafarijungle">Google Play</a>
+        <a class="ghost" href="https://fatihcelik1.github.io/merge-privacy/">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Ant Picnic: Pixel Art Puzzle</h2>
+      <p>Guide the ants and reveal colorful pixel-art pictures, one level at a time.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.fatihcelik.karinca">Google Play</a>
+        <a class="ghost" href="https://fatihcelik1.github.io/karinca-privacy/">Privacy Policy</a>
+      </div>
+    </div>
+
+    <footer>
+      Support: <a href="mailto:16.5fatihcelik@gmail.com">16.5fatihcelik@gmail.com</a>
+    </footer>
   </div>
 </body>
 </html>
