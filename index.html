@@ -3,84 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>fcgames — Mobile Games</title>
-<meta name="description" content="Independent mobile puzzle and casual games by Fatih Celik.">
+<title>FC GAMES — Mobile puzzle games</title>
+<meta name="description" content="Independent mobile puzzle games by Fatih Çelik. Hexa Twist, Poopie, Merge Safari, Block Puzzle Blast Color and Ant Picnic — live on Google Play and the App Store.">
+<link rel="canonical" href="https://fatihcelik1.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="FC GAMES — Mobile puzzle games">
+<meta property="og:description" content="Five puzzle games, built solo. Live on Google Play and the App Store.">
+<meta property="og:url" content="https://fatihcelik1.github.io/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&display=swap">
 <style>
-  :root{--bg:#14131a;--card:#1e1d26;--ink:#eceaf2;--muted:#9a94a8;--accent:#5b9be6;--line:#2b2a35}
+  :root{
+    --green:#50C878;
+    --gold:#FFDC78;
+    --ink:#0C100D;
+    --card:#151A16;
+    --line:#232B25;
+    --shadow:#1E2620;
+    --text:#F2F5F2;
+    --muted:#9AA79E;
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-       font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
-  .wrap{max-width:720px;margin:0 auto;padding:56px 20px 72px}
-  h1{font-size:2rem;margin:0 0 6px;letter-spacing:-.02em}
-  .sub{color:var(--muted);margin:0 0 36px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
-        padding:18px 20px;margin:0 0 14px}
-  .card h2{font-size:1.05rem;margin:0 0 4px}
-  .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
-  .links{display:flex;flex-wrap:wrap;gap:8px}
-  .links a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;
-           font-size:.85rem;background:#26252f}
-  .links a.ghost{background:transparent;color:var(--muted)}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  footer{margin-top:40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:20px}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--ink);color:var(--text);
+    font-family:Archivo,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1160px;margin:0 auto;padding:40px 32px 64px}
+  a{color:inherit;text-decoration:none}
+
+  /* logo lockup */
+  .logo{display:inline-flex;flex-direction:column;align-items:center;line-height:1}
+  .logo .fc{
+    font-family:Anton,'Arial Narrow',Impact,sans-serif;
+    font-size:30px;letter-spacing:.02em;color:#fff;
+    text-shadow:3px 3px 0 var(--gold);
+  }
+  .logo .games{
+    font-size:10px;font-weight:600;color:var(--gold);
+    letter-spacing:.34em;margin-top:5px;padding-left:.34em;
+  }
+
+  header{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:72px}
+  nav{display:flex;gap:26px;font-size:15px;font-weight:500;color:var(--muted)}
+  nav a:hover{color:var(--green)}
+
+  h1{
+    font-family:Anton,'Arial Narrow',Impact,sans-serif;font-weight:400;
+    font-size:clamp(44px,8.5vw,104px);line-height:.94;letter-spacing:-.005em;
+    margin:0 0 24px;text-transform:uppercase;text-wrap:balance;
+  }
+  h1 .g{color:var(--green)}
+  h1 .y{color:var(--gold)}
+  .lede{max-width:560px;font-size:clamp(16px,2.2vw,20px);color:var(--muted);margin:0 0 56px}
+
+  .sec-label{
+    display:flex;align-items:center;gap:16px;
+    font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 20px;
+  }
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .featured{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-bottom:56px}
+  .hero-card{border-radius:24px;padding:28px;color:var(--ink);box-shadow:9px 9px 0 var(--shadow)}
+  .hero-card.green{background:var(--green)}
+  .hero-card.gold{background:var(--gold)}
+  .plaque{background:var(--ink);border-radius:26px;padding:14px;display:inline-flex;margin-bottom:20px}
+  .plaque img{width:100px;height:100px;display:block}
+  .hero-card h2{
+    font-family:Anton,'Arial Narrow',Impact,sans-serif;font-weight:400;
+    font-size:28px;line-height:1.05;letter-spacing:.01em;margin:0 0 8px;text-transform:uppercase;
+  }
+  .hero-card p{font-size:15px;margin:0 0 20px;color:rgba(12,16,13,.72)}
+  .btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .btn{
+    border:2px solid var(--ink);border-radius:999px;padding:8px 16px;
+    font-size:13px;font-weight:600;white-space:nowrap;
+  }
+  .btn:hover{background:var(--ink);color:var(--text)}
+  .pp{font-size:13px;font-weight:500;color:rgba(12,16,13,.6);text-decoration:underline}
+  .pp:hover{color:var(--ink)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:72px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .card img{width:88px;height:88px;display:block}
+  .card h2{
+    font-family:Anton,'Arial Narrow',Impact,sans-serif;font-weight:400;
+    font-size:22px;line-height:1.1;letter-spacing:.01em;margin:0;text-transform:uppercase;
+  }
+  .card p{font-size:15px;color:var(--muted);margin:0;flex:1}
+  .card .links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:14px}
+  .card .play{color:var(--green);font-weight:600}
+  .card .play:hover{color:var(--gold)}
+  .card .pp2{color:var(--muted);text-decoration:underline}
+  .card .pp2:hover{color:var(--text)}
+
+  footer{
+    border-top:1px solid var(--line);padding-top:28px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+    font-size:15px;color:var(--muted);
+  }
+  footer a{color:var(--green);font-weight:600}
+  footer a:hover{color:var(--gold)}
+
+  @media (max-width:900px){
+    .wrap{padding:32px 22px 56px}
+    header{margin-bottom:48px}
+    .featured{grid-template-columns:1fr;gap:20px}
+    .grid{grid-template-columns:1fr;gap:20px}
+    .card{flex-direction:row;align-items:flex-start;flex-wrap:wrap;gap:18px}
+    .card img{width:76px;height:76px}
+    .card .txt{flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px}
+  }
+  @media (max-width:520px){
+    nav{display:none}
+    .hero-card,.card{padding:20px;border-radius:20px}
+    .hero-card{box-shadow:6px 6px 0 var(--shadow)}
+  }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>fcgames</h1>
-    <p class="sub">Independent mobile puzzle and casual games.</p>
+<div class="wrap">
 
-    <div class="card">
-      <h2>Hexa Twist: Color Puzzle</h2>
-      <p>A 3D hexagon color-sorting puzzle. Stack matching colors, clear towers, relax.</p>
-      <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.fatihcelik.hegasort">Google Play</a>
-        <a href="https://apps.apple.com/app/id6792283478">App Store</a>
-        <a class="ghost" href="https://fatihcelik1.github.io/hexa-sort-privacy/">Privacy Policy</a>
+  <header>
+    <span class="logo"><span class="fc">FC</span><span class="games">GAMES</span></span>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#privacy">Privacy</a>
+      <a href="mailto:16.5fatihcelik@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <h1>Five games.<br><span class="g">One</span> <span class="y">stubborn</span><br>developer.</h1>
+  <p class="lede">Mobile puzzle games built solo in Istanbul, shipped on Google Play and the App Store. No studio, no publisher — just the next level.</p>
+
+  <p class="sec-label" id="games">On both stores</p>
+  <div class="featured">
+
+    <div class="hero-card green">
+      <span class="plaque"><img src="icons/hexa.webp" alt="Hexa Twist app icon" width="100" height="100" loading="lazy"></span>
+      <h2>Hexa Twist</h2>
+      <p>Stack hexagons by colour, clear the board, chase the combo.</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.fatihcelik.hegasort">Google Play</a>
+        <a class="btn" href="https://apps.apple.com/app/id6792283478">App Store</a>
+        <a class="pp" href="https://fatihcelik1.github.io/hexa-sort-privacy/">Privacy</a>
       </div>
     </div>
 
-    <div class="card">
-      <h2>Poopie: Poop Tracker &amp; Game</h2>
-      <p>A light, playful daily tracking app with streaks, stats and collectibles.</p>
-      <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.poopie.app.poopie">Google Play</a>
-        <a href="https://apps.apple.com/app/id6783956747">App Store</a>
-        <a class="ghost" href="https://fatihcelik1.github.io/poopie-privacy/">Privacy Policy</a>
+    <div class="hero-card gold">
+      <span class="plaque"><img src="icons/poopie.webp" alt="Poopie app icon" width="100" height="100" loading="lazy"></span>
+      <h2>Poopie</h2>
+      <p>A daily tracker that turned into a game. Streaks, stats, collectibles.</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.poopie.app.poopie">Google Play</a>
+        <a class="btn" href="https://apps.apple.com/app/id6783956747">App Store</a>
+        <a class="pp" href="https://fatihcelik1.github.io/poopie-privacy/">Privacy</a>
       </div>
     </div>
-
-    <div class="card">
-      <h2>Block Puzzle Blast Color</h2>
-      <p>Classic block puzzle with colorful blast effects and combo chains.</p>
-      <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.fcgames.blockpuzzleblastcolor">Google Play</a>
-        <a class="ghost" href="https://fatihcelik1.github.io/blockpuzzle-blast-color-privacy/">Privacy Policy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Merge Safari: Animal Puzzle</h2>
-      <p>Merge animals, grow your jungle and unlock new species.</p>
-      <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.fcgames.mergesafarijungle">Google Play</a>
-        <a class="ghost" href="https://fatihcelik1.github.io/merge-privacy/">Privacy Policy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Ant Picnic: Pixel Art Puzzle</h2>
-      <p>Guide the ants and reveal colorful pixel-art pictures, one level at a time.</p>
-      <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.fatihcelik.karinca">Google Play</a>
-        <a class="ghost" href="https://fatihcelik1.github.io/karinca-privacy/">Privacy Policy</a>
-      </div>
-    </div>
-
-    <footer>
-      Support: <a href="mailto:16.5fatihcelik@gmail.com">16.5fatihcelik@gmail.com</a>
-    </footer>
   </div>
+
+  <p class="sec-label" id="privacy">On Google Play</p>
+  <div class="grid">
+
+    <div class="card">
+      <img src="icons/merge.webp" alt="Merge Safari app icon" width="88" height="88" loading="lazy">
+      <div class="txt">
+        <h2>Merge Safari</h2>
+        <p>Merge animals, grow the jungle, unlock the whole safari.</p>
+        <div class="links">
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.fcgames.mergesafarijungle">Google Play →</a>
+          <a class="pp2" href="https://fatihcelik1.github.io/merge-privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="icons/block.webp" alt="Block Puzzle Blast Color app icon" width="88" height="88" loading="lazy">
+      <div class="txt">
+        <h2>Block Puzzle Blast Color</h2>
+        <p>The block puzzle you know, with colour blasts and combo chains.</p>
+        <div class="links">
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.fcgames.blockpuzzleblastcolor">Google Play →</a>
+          <a class="pp2" href="https://fatihcelik1.github.io/blockpuzzle-blast-color-privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="icons/ant.webp" alt="Ant Picnic app icon" width="88" height="88" loading="lazy">
+      <div class="txt">
+        <h2>Ant Picnic</h2>
+        <p>Guide the ants, reveal the pixel art, one level at a time.</p>
+        <div class="links">
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.fatihcelik.karinca">Google Play →</a>
+          <a class="pp2" href="https://fatihcelik1.github.io/karinca-privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>FC GAMES — Fatih Çelik, Istanbul</span>
+    <a href="mailto:16.5fatihcelik@gmail.com">16.5fatihcelik@gmail.com</a>
+  </footer>
+</div>
 </body>
 </html>
