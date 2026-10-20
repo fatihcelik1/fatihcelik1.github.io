@@ -1,12 +1,13 @@
 # app-ads.txt - Fatih Celik (FC GAMES)
 # https://fatihcelik1.github.io/app-ads.txt
-# Son guncelleme: 2026-10-17 - Unity Ads yetkili satici listesi tazelendi.
+# Son guncelleme: 2026-10-20 - Liftoff Monetize (vungle.com) DIRECT satiri eklendi.
 
 ownerdomain=fatihcelik1.github.io
 
 # Direct sellers
 google.com, pub-5924651773494504, DIRECT, f08c47fec0942fa0
 unity.com, 20664666, DIRECT, 96cabb5fbdde37a7
+vungle.com, 6ad798ca5f9902f6977523e6, DIRECT, c107d686becd2d77
 
 # Resellers
 adwmg.com, 159512, RESELLER, c9688a22012618e7
