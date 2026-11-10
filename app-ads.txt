@@ -1,6 +1,6 @@
 # app-ads.txt - Fatih Celik (FC GAMES)
 # https://fatihcelik1.github.io/app-ads.txt
-# Son guncelleme: 2026-10-20 - Liftoff Monetize (vungle.com) DIRECT satiri eklendi.
+# Son guncelleme: 2026-11-10 - Unity listesi tazelendi (monetrix, playdigo, start.io eklendi).
 
 ownerdomain=fatihcelik1.github.io
 
@@ -56,6 +56,7 @@ media.net, 8CU9B72O6, RESELLER
 media.net, 8CUH46N56, RESELLER
 media.net, 8CUSC3UJ7, RESELLER
 media.net, 8CUUQ286L, RESELLER
+monetrix.ai, 10761, RESELLER
 my-cast.tv, 987033, RESELLER, 8c33fe1bd714ffd7
 nativo.com, 5958, RESELLER, 59521ca7cc5e9fee
 nativo.com, 6089, RESELLER, 59521ca7cc5e9fee
@@ -71,6 +72,7 @@ openx.com, 562174952, RESELLER, 6a698e2ec38604c6
 openx.com, 563905670, RESELLER, 6a698e2ec38604c6
 openx.com, 565175463, RESELLER, 6a698e2ec38604c6
 opera.com, pub6148735850944, RESELLER, 55a0c5fd61378de3
+playdigo.com, 1965, RESELLER
 playwire.com, 1018531, RESELLER
 pokkt.com, 6246, RESELLER, c45702d9311e25fd
 prado.co, 14260, RESELLER
@@ -131,6 +133,7 @@ smartadserver.com, 5828, RESELLER, 060d053dcf45cbf3
 smartclip.net, 14679, RESELLER
 smartclip.net, 15458, RESELLER
 spinx.biz, 1373698903, RESELLER, 9f2711e9aaa9f992
+start.io, 131192070, RESELLER
 start.io, 197760873, RESELLER
 stroeer.com, 17379, RESELLER
 targetbetter.com, 82228, RESELLER
